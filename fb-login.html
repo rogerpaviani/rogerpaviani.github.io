@@ -82,7 +82,9 @@
           document.getElementById('status').innerHTML =
             'Thanks for logging in, ' + response.name + '!';
           localStorage.userData = response;
-          location.href = 'index.html';
+          setTimeout(function () {
+            location.href = 'index.html';
+          }, 3000); 
         });
       }
     </script>
