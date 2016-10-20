@@ -2,11 +2,9 @@
 (function(d) {
   'use strict';
 
-  var $ = d.querySelector;
-
   if ('userData' in localStorage)
   {
-    $('.main').classList.remove('hide');
+    d.querySelector('.main').classList.remove('hide');
     alert('ok!');
   }
   else{
