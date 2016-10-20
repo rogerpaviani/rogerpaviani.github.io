@@ -16,7 +16,7 @@
     <button id="butAdd" class="headerButton" aria-label="Add"></button>
   </header>
 
-  <main class="main">
+  <main class="main" style="text-align:center">
     <script>
       // This is called with the results from from FB.getLoginStatus().
       function statusChangeCallback(response) {
@@ -105,11 +105,15 @@
       the FB.login() function when clicked.
     -->
 
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>
+    <p>
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      </fb:login-button>
+    </p>
 
-    <div id="status">
-    </div>
+    <p>
+      <div id="status">
+      </div>
+    </p>
     
   </main>
 
