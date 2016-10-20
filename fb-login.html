@@ -31,11 +31,13 @@
           // The person is logged into Facebook, but not your app.
           document.getElementById('status').innerHTML = 'Please log ' +
             'into this app.';
+            document.querySelector('p.hide').classList.remove('hide');
         } else {
           // The person is not logged into Facebook, so we're not sure if
           // they are logged into this app or not.
           document.getElementById('status').innerHTML = 'Please log ' +
             'into Facebook.';
+            document.querySelector('p.hide').classList.remove('hide');
         }
       }
 
@@ -105,7 +107,7 @@
       the FB.login() function when clicked.
     -->
 
-    <p>
+    <p class="hide">
       <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
       </fb:login-button>
     </p>
