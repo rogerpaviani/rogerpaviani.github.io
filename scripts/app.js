@@ -61,6 +61,11 @@
    *
    ****************************************************************************/
 
+  document.getElementById('butLogout').addEventListener('click', function() {
+    localStorage.removeItem('userData');
+    location.href = 'fb-login.html';
+  });
+
   document.getElementById('butRefresh').addEventListener('click', function() {
     // Refresh all of the forecasts
     app.updateForecasts();
