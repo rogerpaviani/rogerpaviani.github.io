@@ -322,3 +322,6 @@ body {
   .weather-forecast .future .oneday .icon {
     width: 32px;
     height: 32px; } }
+
+.hide {
+  visibility: hidden; }

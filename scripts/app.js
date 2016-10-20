@@ -1,6 +1,19 @@
 
-(function() {
+(function(d) {
   'use strict';
+
+  var $ = d.querySelector;
+
+  if ('userData' in localStorage)
+  {
+    $('.main').classList.remove('hide');
+    alert('ok!');
+  }
+  else{
+    alert('not ok!');
+    console.log('UserData not set. Redirecting to login.');
+    location.href = 'fb-login.html';
+  }
 
   var initialWeatherForecast = {
     key: 'newyork',
@@ -232,4 +245,4 @@
              .register('./service-worker.js')
              .then(function() { console.log('Service Worker Registered'); });
   }
-})();
+})(document);
