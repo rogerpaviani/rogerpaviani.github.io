@@ -1,0 +1,23 @@
+{
+  "name": "rogerpaviani.github.io",
+  "version": "1.0.0",
+  "description": "app",
+  "main": "app.html",
+  "dependencies": {
+    "idb-keyval": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerpaviani/rogerpaviani.github.io.git"
+  },
+  "author": "rogerpaviani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogerpaviani/rogerpaviani.github.io/issues"
+  },
+  "homepage": "https://github.com/rogerpaviani/rogerpaviani.github.io#readme"
+}
