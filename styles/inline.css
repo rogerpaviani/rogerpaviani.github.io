@@ -262,7 +262,8 @@ a {
 
 .menu .menu-header {
   background-color: #3F51B5;
-  height: 160px;
+  height: 100px;
+  padding: 32px;
 }
 
 .menu ul {
@@ -355,4 +356,8 @@ a {
 
 .card .bg-red {
   background-color: red;
+}
+
+.right {
+  text-align: right;
 }
