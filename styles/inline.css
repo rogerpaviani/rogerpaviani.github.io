@@ -84,32 +84,23 @@ body {
   transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
   transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
   transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s, -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .header .btn {
   width: 24px;
   height: 24px;
-  margin-right: 16px;
-  text-indent: -30000px;
+  margin-right: 12px;
   overflow: hidden;
-  opacity: 0.54;
-  -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
-  transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+  opacity: 0.65;
   border: none;
   outline: none;
   cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
 }
 
-.header #btnRefresh {
-  background: url(../images/ic_refresh_white_24px.svg) center center no-repeat;
-}
-
-.header #btnAdd {
-  background: url(../images/ic_add_white_24px.svg) center center no-repeat;
-}
-
-.header__title {
+.header .header__title {
   font-weight: 400;
   font-size: 20px;
   margin: 0;
@@ -206,6 +197,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.menu-container,
 .dialog-container {
   background: rgba(0, 0, 0, 0.57);
   position: fixed;
@@ -220,6 +212,11 @@ body {
   transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
 }
 
+.menu-container {
+  z-index: 2;
+}
+
+.menu-container--visible,
 .dialog-container--visible {
   opacity: 1;
   pointer-events: auto;
@@ -239,6 +236,37 @@ body {
   transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
   transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
   transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s, -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+}
+
+.menu {
+  background: #FFF;
+  border-radius: 0px;
+  min-width: 280px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition-duration: .2s;
+  z-index: 5;
+}
+
+.menu .menu-header {
+  background-color: #3F51B5;
+  height: 160px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0px;
+}
+
+.menu ul li {
+  margin-bottom: 16px;
 }
 
 .card {
@@ -268,69 +296,6 @@ body {
   font-size: 1em;
 }
 
-.card .current {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.card .current .icon {
-  width: 128px;
-  height: 128px;
-}
-
-.card .current .visual {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 4em;
-}
-
-.card .current .visual .scale {
-  font-size: 0.5em;
-  vertical-align: super;
-}
-
-.card .current .visual,
-.card .current .description {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.card .current .feels-like:before {
-  content: "Feels like: ";
-  color: #888;
-}
-
-.card .current .wind:before {
-  content: "Wind: ";
-  color: #888;
-}
-
-.card .current .precip:before {
-  content: "Precipitation: ";
-  color: #888;
-}
-
-.card .current .humidity:before {
-  content: "Humidity: ";
-  color: #888;
-}
-
-.card .current .pollen:before {
-  content: "Pollen Count: ";
-  color: #888;
-}
-
-.card .current .pcount:before {
-  content: "Pollen ";
-  color: #888;
-}
-
 .card .box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -342,8 +307,7 @@ body {
   content: 'R$ ';
 }
 
-.card .box>div,
-.card .box .oneday {
+.card .box>div {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -351,89 +315,38 @@ body {
   text-align: center;
 }
 
-.card .box .oneday .icon {
-  width: 64px;
-  height: 64px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card .box .oneday .temp-high,
-.card .box .oneday .temp-low {
-  display: inline-block;
-}
-
-.card .box .oneday .temp-low {
-  color: #888;
-}
-
-.card .icon {
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.card .icon.clear-day {
-  background-image: url("../images/clear.png");
-}
-
-.card .icon.clear-night {
-  background-image: url("../images/clear.png");
-}
-
-.card .icon.rain {
-  background-image: url("../images/rain.png");
-}
-
-.card .icon.snow {
-  background-image: url("../images/snow.png");
-}
-
-.card .icon.sleet {
-  background-image: url("../images/sleet.png");
-}
-
-.card .icon.wind {
-  background-image: url("../images/wind.png");
-}
-
-.card .icon.fog {
-  background-image: url("../images/fog.png");
-}
-
-.card .icon.cloudy {
-  background-image: url("../images/cloudy.png");
-}
-
-.card .icon.partly-cloudy-day {
-  background-image: url("../images/partly-cloudy.png");
-}
-
-.card .icon.partly-cloudy-night {
-  background-image: url("../images/partly-cloudy.png");
-}
-
-.card .icon.thunderstorms {
-  background-image: url("../images/thunderstorms.png");
-}
-
 @media (max-width: 450px) {
   .card .st,
   .card .description {
     font-size: 0.9em;
   }
-  .card .current .icon {
-    width: 96px;
-    height: 96px;
-  }
-  .card .current .visual {
-    font-size: 3em;
-  }
-  .card .box .oneday .icon {
-    width: 32px;
-    height: 32px;
-  }
 }
 
 .hide {
   visibility: hidden;
+}
+
+.card input[type="radio"]+label {
+  display: block;
+  width: 100%;
+}
+
+.card input[type="radio"]+label>div {
+  opacity: 0.4;
+  color: white;
+  height: 24px;
+  line-height: 24px;
+}
+
+.card input[type="radio"]:checked+label>div {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.card .bg-green {
+  background-color: green;
+}
+
+.card .bg-red {
+  background-color: red;
 }
