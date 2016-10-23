@@ -31,10 +31,6 @@ var filesToCache = [
   '/index.html',
   '/scripts/app.js',
   '/styles/inline.css',
-  '/images/ic_add_white_24px.svg',
-  '/images/ic_refresh_white_24px.svg',
-  '/images/scattered-showers.png',
-  '/images/thunderstorm.png',
 ];
 
 self.addEventListener('fetch', function (e) {

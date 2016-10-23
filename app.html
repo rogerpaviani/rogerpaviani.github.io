@@ -28,18 +28,35 @@
   </header>
 
   <main class="main">
-    <div class="card balance">
+    <div class="card new">
+      <div class="box">
+        <div class="title">Novo lançamento</div>
+        <div class="box">
+          <div><input id="rad1" type="radio" name="radType" checked hidden><label for="rad1"><div class="bg-green">Recebimento</div></label></div>
+          <div><input id="rad2" type="radio" name="radType" hidden><label for="rad2"><div class="bg-red">Pagamento</div></label></div>
+        </div>
+        <div class="separator"></div>
+        <div><input type="text" name="entryDescription"></div>
+        <div><input type="date"></div>
+        <div><input type="text"></div>
+        <div><input type="date"></div>
+        <div><input type="text"></div>
+        <div class="stitle">lorem ipsum dolor sit amet</div>
+        <div class="description">bla bla bla description bla bla bla</div>
+      </div>
+    </div>
+    <div class="card default balance">
       <div class="box">
         <div class="title">Saldo atual</div>
         <div>b</div>
       </div>
-      <div class="title">& Saldo atual</div>
+      <div class="title">Saldo atual</div>
       <div class="stitle">&nbsp;</div>
       <div class="footer">
         <a href="?">Extrato</a>
       </div>
     </div>
-    <div class="card income">
+    <div class="card default income">
       <div class="title">&#8599; Recebimentos</div>
       <div class="stitle"></div>
       <div class="entries">
@@ -50,7 +67,7 @@
         </div>
       </div>
     </div>
-    <div class="card expense">
+    <div class="card default expense">
       <div class="title">&#8600; Pagamentos</div>
       <div class="stitle"></div>
       <div class="entries">
@@ -81,18 +98,21 @@
   <div class="menu-container">
     <div class="menu">
       <div class="menu-header">
-        MENU
+        <div>rogerpaviani@gmail.com</div>
+        <a href="javascript:history.back()">X</a>
       </div>
       <ul>
-        <li>xxx</li>
-        <li class="separator"></li>
-        <li>xxx</li>
-        <li>xxx</li>
+        <li>&#9636; Extrato</li>
+        <li>&#8599; Recebimentos</li>
+        <li>&#8600; Pagamentos</li>
+        <li>&#10033; Configurações</li>
+        <li>&#10067; Ajuda</li>
+        <li>&#10069; Sair</li>
       </ul>
     </div>
   </div>
 
-  <div class="dialog-container">
+  <div class="dialog-container" hidden>
     <div class="dialog">
       <div class="card">
         <div class="title">Novo lançamento</div>
@@ -104,15 +124,13 @@
         <div><input type="text" name="entryDescription"></div>
         <div><input type="date"></div>
         <div><input type="text"></div>
-        <div><input type="date"></div>
-        <div><input type="text"></div>
         <div class="stitle">lorem ipsum dolor sit amet</div>
         <div class="description">bla bla bla description bla bla bla</div>
       </div>
     </div>
   </div>
 
-  <div class="loader" hidden>
+  <div class="loader">
     <svg viewBox="0 0 32 32" width="32" height="32">
       <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
     </svg>

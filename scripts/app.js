@@ -1,4 +1,4 @@
-(function (d, idb) {
+(function (d, l, idb) {
   'use strict';
 
   ////////////////////////////////////////////////////////////////////////////////////
@@ -89,32 +89,6 @@
     menuDialog: document.querySelector('.menu-container'),
     daysOfWeek: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
   };
-
-  /*****************************************************************************
-   *
-   * Event listeners for UI elements
-   *
-   ****************************************************************************/
-
-  // document.getElementById('btnAddCity').addEventListener('click', function () {
-  //   // Add the newly selected city
-  //   var select = document.getElementById('selectCityToAdd');
-  //   var selected = select.options[select.selectedIndex];
-  //   var key = selected.value;
-  //   var label = selected.textContent;
-  //   app.getForecast(key, label);
-  //   app.selectedCities.push({
-  //     key: key,
-  //     label: label
-  //   });
-  //   app.saveSelectedCities();
-  //   app.toggleAddDialog(false);
-  // });
-
-  // document.getElementById('btnAddCancel').addEventListener('click', function () {
-  //   // Close the add new city dialog
-  //   app.toggleAddDialog(false);
-  // });
 
   /*****************************************************************************
    *
@@ -247,25 +221,21 @@
   app.init();
 
   (window.onhashchange = function () {
-    console.log('hash:', location.hash);
-    app.toogleMenuDialog(false);
-    app.toggleAddDialog(false);
-    switch (location.hash) {
+    switch (l.hash) {
       case "#menu":
         {
           app.toogleMenuDialog(true);
           break;
         }
-      case "#new":
+      default:
         {
-          app.toggleAddDialog(true);
-          break;
-        }
-      case "#more-income":
-        {
-          break;
+          app.hideAllCards();
+          app.toogleMenuDialog(false);
+          app.container.querySelectorAll('.card.' + (l.hash.substr(1) || 'default')).forEach(function (elem) {
+            elem.removeAttribute('hidden');
+          });
         }
     }
   })();
 
-})(document, idbKeyval);
+})(document, location, idbKeyval);

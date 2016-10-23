@@ -47,6 +47,11 @@ body {
   background: #ececec;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .header {
   width: 100%;
   height: 56px;
@@ -239,19 +244,20 @@ body {
 }
 
 .menu {
-  background: #FFF;
-  border-radius: 0px;
-  min-width: 280px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition-duration: .2s;
+  height: 100%;
+  width: 0;
+  position: fixed;
   z-index: 5;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-radius: 0px;
+}
+
+.menu-container--visible .menu {
+  width: 280px;
 }
 
 .menu .menu-header {
