@@ -303,7 +303,7 @@ a {
   font-size: 1em;
 }
 
-.card .box {
+.card .row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -314,7 +314,7 @@ a {
   content: 'R$ ';
 }
 
-.card .box>div {
+.card .row .col {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;

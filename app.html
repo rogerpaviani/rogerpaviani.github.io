@@ -28,18 +28,28 @@
   </header>
 
   <main class="main" hidden>
+    <div class="card settings">
+      <div class="title">Configurações</div>
+      <div class="separator"></div>
+      <ul>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+      </ul>
+    </div>
     <div class="card default new">
       <div class="title">Novo lançamento</div>
       <div class="separator"></div>
-      <div class="box center">
-        <div><input id="rType1" type="radio" name="rType" hidden><label for="rType1"><div class="bg-green">Recebimentos</div></label></div>
-        <div><input id="rType2" type="radio" name="rType" hidden><label for="rType2"><div class="bg-red">Pagamentos</div></label></div>
+      <div class="row center">
+        <div class="col"><input id="rType1" type="radio" name="rType" hidden><label for="rType1"><div class="bg-green">Recebimentos</div></label></div>
+        <div class="col"><input id="rType2" type="radio" name="rType" hidden><label for="rType2"><div class="bg-red">Pagamentos</div></label></div>
       </div>
       <br />
-      <div class="box center">
-        <div><input id="rDate1" type="radio" name="rDate" hidden><label for="rDate1"><div class="bg-gray">Ontem</div></label></div>
-        <div><input id="rDate2" type="radio" name="rDate" hidden><label for="rDate2"><div class="bg-gray">Hoje</div></label></div>
-        <div><input id="rDate3" type="radio" name="rDate" hidden><label for="rDate3"><div class="bg-gray">Escolher dia...</div></label>
+      <div class="row center">
+        <div class="col"><input id="rDate1" type="radio" name="rDate" hidden><label for="rDate1"><div class="bg-gray">Ontem</div></label></div>
+        <div class="col"><input id="rDate2" type="radio" name="rDate" hidden><label for="rDate2"><div class="bg-gray">Hoje</div></label></div>
+        <div class="col"><input id="rDate3" type="radio" name="rDate" hidden><label for="rDate3"><div class="bg-gray">Escolher dia...</div></label>
         </div>
       </div>
       <div><input type="text" name="entryDescription"></div>
@@ -51,7 +61,7 @@
       <div class="description">bla bla bla description bla bla bla</div>
     </div>
     <div class="card default balance">
-      <div class="box">
+      <div class="row">
         <div class="title left">Saldo atual</div>
         <div class="currency right">&nbsp;</div>
       </div>
@@ -60,10 +70,10 @@
       <div class="title">&#8599; Recebimentos</div>
       <div class="stitle"></div>
       <div class="entries">
-        <div class="box entryTemplate" hidden>
-          <div class="t"></div>
-          <div class="d"></div>
-          <div class="v currency"></div>
+        <div class="row entryTemplate" hidden>
+          <div class="col t"></div>
+          <div class="col d"></div>
+          <div class="col v currency"></div>
         </div>
       </div>
     </div>
@@ -71,20 +81,20 @@
       <div class="title">&#8600; Pagamentos</div>
       <div class="stitle"></div>
       <div class="entries">
-        <div class="box">
-          <div class="t">&#9663;</div>
-          <div class="d">aaa</div>
-          <div class="v currency">123</div>
+        <div class="row">
+          <div class="col t">&#9663;</div>
+          <div class="col d">aaa</div>
+          <div class="col v currency">123</div>
         </div>
-        <div class="box">
-          <div class="t">&#9662;</div>
-          <div class="d">bbb</div>
-          <div class="v currency">456</div>
+        <div class="row">
+          <div class="col t">&#9662;</div>
+          <div class="col d">bbb</div>
+          <div class="col v currency">456</div>
         </div>
-        <div class="box">
-          <div class="t">&#9662;</div>
-          <div class="d">ccc</div>
-          <div class="v currency">789</div>
+        <div class="row">
+          <div class="col t">&#9662;</div>
+          <div class="col d">ccc</div>
+          <div class="col v currency">789</div>
         </div>
       </div>
     </div>
@@ -103,10 +113,10 @@
       </div>
       <ul>
         <li>&#9636; Extrato</li>
-        <li>&#8599; Recebimentos</li>
-        <li>&#8600; Pagamentos</li>
-        <li>&#10033; Configurações</li>
-        <li>&#10067; Ajuda</li>
+        <li><a href="#income">&#8599; Recebimentos</a></li>
+        <li><a href="#expense">&#8600; Pagamentos</a></li>
+        <li><a href="#settings">&#10033; Configurações</a></li>
+        <li><a href="#help">&#10067; Ajuda</a></li>
         <li>&#10069; Sair</li>
       </ul>
     </div>
@@ -116,9 +126,9 @@
     <div class="dialog">
       <div class="card">
         <div class="title">Novo lançamento</div>
-        <div class="box">
-          <div><input id="rad1" type="radio" name="radType" checked hidden><label for="rad1"><div class="bg-green">Recebimento</div></label></div>
-          <div><input id="rad2" type="radio" name="radType" hidden><label for="rad2"><div class="bg-red">Pagamento</div></label></div>
+        <div class="row">
+          <div class="col"><input id="rad1" type="radio" name="radType" checked hidden><label for="rad1"><div class="bg-green">Recebimento</div></label></div>
+          <div class="col"><input id="rad2" type="radio" name="radType" hidden><label for="rad2"><div class="bg-red">Pagamento</div></label></div>
         </div>
         <div class="separator"></div>
         <div><input type="text" name="entryDescription"></div>
