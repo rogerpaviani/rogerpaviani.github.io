@@ -27,33 +27,26 @@
     <a href="#new" class="btn">+</a>
   </header>
 
-  <main class="main">
+  <main class="main" hidden>
     <div class="card new">
+      <div class="title">Novo lançamento</div>
       <div class="box">
-        <div class="title">Novo lançamento</div>
-        <div class="box">
-          <div><input id="rad1" type="radio" name="radType" checked hidden><label for="rad1"><div class="bg-green">Recebimento</div></label></div>
-          <div><input id="rad2" type="radio" name="radType" hidden><label for="rad2"><div class="bg-red">Pagamento</div></label></div>
-        </div>
-        <div class="separator"></div>
-        <div><input type="text" name="entryDescription"></div>
-        <div><input type="date"></div>
-        <div><input type="text"></div>
-        <div><input type="date"></div>
-        <div><input type="text"></div>
-        <div class="stitle">lorem ipsum dolor sit amet</div>
-        <div class="description">bla bla bla description bla bla bla</div>
+        <div><input id="rad1" type="radio" name="radType" checked hidden><label for="rad1"><div class="bg-green">Recebimento</div></label></div>
+        <div><input id="rad2" type="radio" name="radType" hidden><label for="rad2"><div class="bg-red">Pagamento</div></label></div>
       </div>
+      <div class="separator"></div>
+      <div><input type="text" name="entryDescription"></div>
+      <div><input type="date"></div>
+      <div><input type="text"></div>
+      <div><input type="date"></div>
+      <div><input type="text"></div>
+      <div class="stitle">lorem ipsum dolor sit amet</div>
+      <div class="description">bla bla bla description bla bla bla</div>
     </div>
     <div class="card default balance">
       <div class="box">
-        <div class="title">Saldo atual</div>
-        <div>b</div>
-      </div>
-      <div class="title">Saldo atual</div>
-      <div class="stitle">&nbsp;</div>
-      <div class="footer">
-        <a href="?">Extrato</a>
+        <div class="title left">Saldo atual</div>
+        <div class="currency right">&nbsp;</div>
       </div>
     </div>
     <div class="card default income">
@@ -63,7 +56,7 @@
         <div class="box entryTemplate" hidden>
           <div class="t"></div>
           <div class="d"></div>
-          <div class="v"></div>
+          <div class="v currency"></div>
         </div>
       </div>
     </div>
@@ -74,23 +67,23 @@
         <div class="box">
           <div class="t">&#9663;</div>
           <div class="d">aaa</div>
-          <div class="v">123</div>
+          <div class="v currency">123</div>
         </div>
         <div class="box">
           <div class="t">&#9662;</div>
           <div class="d">bbb</div>
-          <div class="v">456</div>
+          <div class="v currency">456</div>
         </div>
         <div class="box">
           <div class="t">&#9662;</div>
           <div class="d">ccc</div>
-          <div class="v">789</div>
+          <div class="v currency">789</div>
         </div>
       </div>
     </div>
   </main>
 
-  <div class="card warning">
+  <div class="card warning" hidden>
     <div class="title">Avisos</div>
     <div class="description">lorem ipsum dolor sit amet consectetuer adipiscing elit.</div>
   </div>
