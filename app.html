@@ -28,13 +28,20 @@
   </header>
 
   <main class="main" hidden>
-    <div class="card new">
+    <div class="card default new">
       <div class="title">Novo lançamento</div>
-      <div class="box">
-        <div><input id="rad1" type="radio" name="radType" checked hidden><label for="rad1"><div class="bg-green">Recebimento</div></label></div>
-        <div><input id="rad2" type="radio" name="radType" hidden><label for="rad2"><div class="bg-red">Pagamento</div></label></div>
-      </div>
       <div class="separator"></div>
+      <div class="box center">
+        <div><input id="rType1" type="radio" name="rType" hidden><label for="rType1"><div class="bg-green">Recebimentos</div></label></div>
+        <div><input id="rType2" type="radio" name="rType" hidden><label for="rType2"><div class="bg-red">Pagamentos</div></label></div>
+      </div>
+      <br />
+      <div class="box center">
+        <div><input id="rDate1" type="radio" name="rDate" hidden><label for="rDate1"><div class="bg-gray">Ontem</div></label></div>
+        <div><input id="rDate2" type="radio" name="rDate" hidden><label for="rDate2"><div class="bg-gray">Hoje</div></label></div>
+        <div><input id="rDate3" type="radio" name="rDate" hidden><label for="rDate3"><div class="bg-gray">Escolher dia...</div></label>
+        </div>
+      </div>
       <div><input type="text" name="entryDescription"></div>
       <div><input type="date"></div>
       <div><input type="text"></div>

@@ -261,7 +261,7 @@ a {
 }
 
 .menu .menu-header {
-  background-color: #3F51B5;
+  background: #3F51B5;
   height: 100px;
   padding: 32px;
 }
@@ -340,8 +340,9 @@ a {
 .card input[type="radio"]+label>div {
   opacity: 0.4;
   color: white;
-  height: 24px;
-  line-height: 24px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 32px;
 }
 
 .card input[type="radio"]:checked+label>div {
@@ -350,11 +351,15 @@ a {
 }
 
 .card .bg-green {
-  background-color: green;
+  background: green;
 }
 
 .card .bg-red {
-  background-color: red;
+  background: red;
+}
+
+.card .bg-gray {
+  background: gray;
 }
 
 .right {
@@ -363,4 +368,13 @@ a {
 
 .left {
   text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.separator {
+  border-top: 2px solid #ececec;
+  margin-bottom: 12px;
 }

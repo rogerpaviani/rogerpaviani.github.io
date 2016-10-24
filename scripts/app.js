@@ -15,6 +15,10 @@
     hide: function () {
       this.card.setAttribute('hidden', true);
     },
+    init: function () {
+      balance.update(52678.90);
+      balance.show();
+    }
   };
 
   ////////////////////////////////////////////////////////////////////////////////////
@@ -74,6 +78,15 @@
       return idbKeyval.set('income', ii)
         .catch(err => console.log('income.set failed!', err));
     },
+    init: function () {
+      // income.add({ val: 99.8, desc: 'jantar', date: 20161001 });
+      // income.add({ val: 35.67, desc: 'táxi', date: 20160124 });
+      // income.add({ val: 7.08, desc: 'suco', date: 20161219 });
+      // income.add({ val: 9.98, desc: 'sanduíche', date: 20160221 });
+      // income.add({ val: 199.85, desc: 'mercado', date: 20160821 });
+      income.update();
+      income.show();
+    }
   };
 
   ////////////////////////////////////////////////////////////////////////////////////
@@ -110,16 +123,10 @@
   // };
 
   app.init = function () {
-    balance.update(52678.90);
-    balance.show();
+    balance.init();
+    income.init();
 
-    // income.add({ val: 99.8, desc: 'jantar', date: 20161001 });
-    // income.add({ val: 35.67, desc: 'táxi', date: 20160124 });
-    // income.add({ val: 7.08, desc: 'suco', date: 20161219 });
-    // income.add({ val: 9.98, desc: 'sanduíche', date: 20160221 });
-    // income.add({ val: 199.85, desc: 'mercado', date: 20160821 });
-    income.update();
-    income.show();
+    d.querySelector("#rType1").checked = true
 
     if (app.isLoading) {
       app.spinner.setAttribute('hidden', true);
