@@ -170,15 +170,6 @@
   border-left: 5px solid red;
 }
 
-.card .title {
-  font-size: 1em;
-}
-
-.card .stitle,
-.card .description {
-  font-size: 1em;
-}
-
 .card .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -210,11 +201,11 @@
   width: 100%;
 }*/
 
-.card input[type="radio"]+label>div {
+.card label input[type="radio"]+a {
   opacity: 0.4;
 }
 
-.card input[type="radio"]:checked+label>div {
+.card label input[type="radio"]:checked+a {
   opacity: 1;
 }
 

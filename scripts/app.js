@@ -126,8 +126,6 @@
     balance.init();
     income.init();
 
-    d.querySelector("#rType1").checked = true
-
     if (app.isLoading) {
       app.spinner.setAttribute('hidden', true);
       app.container.removeAttribute('hidden');
