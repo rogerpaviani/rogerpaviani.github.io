@@ -204,38 +204,18 @@
   }
 }
 
-.hide {
-  visibility: hidden;
-}
 
-.card input[type="radio"]+label {
+/*.card input[type="radio"]+label {
   display: block;
   width: 100%;
-}
+}*/
 
 .card input[type="radio"]+label>div {
   opacity: 0.4;
-  color: white;
-  height: 32px;
-  line-height: 32px;
-  border-radius: 32px;
 }
 
 .card input[type="radio"]:checked+label>div {
   opacity: 1;
-  font-weight: bold;
-}
-
-.right {
-  text-align: right;
-}
-
-.left {
-  text-align: left;
-}
-
-.center {
-  text-align: center;
 }
 
 .separator {
