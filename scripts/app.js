@@ -1,5 +1,9 @@
-(function (d, l, idb) {
+(function (w, d, l, idb) {
   'use strict';
+
+  window.onerror = function () {
+    alert(JSON.stringify(arguments));
+  };
 
   ////////////////////////////////////////////////////////////////////////////////////
   const balance = {
@@ -248,4 +252,4 @@
   //   app.saveSelectedCities();
   // }
 
-})(document, location, idbKeyval);
+})(window, document, location, idbKeyval);
