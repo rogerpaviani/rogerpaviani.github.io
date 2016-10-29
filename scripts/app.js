@@ -131,6 +131,7 @@
       app.container.removeAttribute('hidden');
       app.isLoading = false;
     }
+
   };
 
   (window.onhashchange = function () {
