@@ -1,8 +1,9 @@
-* {
+/** {
   box-sizing: border-box;
-}
+}*/
 
-html,
+
+/*html,
 body {
   padding: 0;
   margin: 0;
@@ -14,13 +15,15 @@ body {
   color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+}*/
 
-html {
+
+/*html {
   overflow: hidden;
-}
+}*/
 
-body {
+
+/*body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -45,14 +48,16 @@ body {
   -ms-flex-line-pack: stretch;
   align-content: stretch;
   background: #ececec;
-}
+}*/
 
-a {
+
+/*a {
   color: inherit;
   text-decoration: inherit;
-}
+}*/
 
-.header {
+
+/*.header {
   width: 100%;
   height: 56px;
   color: #FFF;
@@ -90,9 +95,10 @@ a {
   transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
   transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s, -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
   z-index: 1;
-}
+}*/
 
-.header .btn {
+
+/*.header .btn {
   width: 24px;
   height: 24px;
   margin-right: 12px;
@@ -103,9 +109,10 @@ a {
   cursor: pointer;
   color: inherit;
   text-decoration: inherit;
-}
+}*/
 
-.header .header__title {
+
+/*.header .header__title {
   font-weight: 400;
   font-size: 20px;
   margin: 0;
@@ -113,7 +120,7 @@ a {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-}
+}*/
 
 .loader {
   left: 50%;
@@ -192,7 +199,7 @@ a {
 }
 
 .main {
-  padding-top: 60px;
+  /*padding-top: 60px;*/
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
