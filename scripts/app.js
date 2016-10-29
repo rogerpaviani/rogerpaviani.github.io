@@ -95,7 +95,7 @@
     isLoading: true,
     spinner: document.querySelector('.loader'),
     cardTemplate: document.querySelector('.cardTemplate'),
-    container: document.querySelector('.main'),
+    container: document.querySelector('main'),
     addDialog: document.querySelector('.dialog-container'),
     menuDialog: document.querySelector('.menu-container'),
   };
