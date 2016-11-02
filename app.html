@@ -40,46 +40,41 @@
     </details>
   </header>
   <main hidden>
-    <div class="card default settings">
-      <div>Configurações</div>
-      <div class="separator"></div>
+    <section class="default settings">
+      <h4>Configurações</h4>
+      xxxx
       <ul>
         <li>a</li>
         <li>a</li>
         <li>a</li>
         <li>a</li>
       </ul>
-    </div>
-    <div class="card default new">
-      <div>Novo lançamento</div>
-      <div class="separator"></div>
-      <div class="row txt--center">
-        <div class="col"><label><input type="radio" name="rType" hidden><a class="btn--green">Recebimentos</a></label></div>
-        <div class="col"><label><input type="radio" name="rType" hidden><a class="btn--red">Pagamentos</a></label></div>
+    </section>
+    <section class="default new">
+      <h4>Novo lançamento</h4>
+      <div class="txt--center">
+        <label><input type="radio" name="rType" hidden><a class="btn--green">Recebimentos</a></label>
+        <label><input type="radio" name="rType" hidden><a class="btn--red">Pagamentos</a></label>
       </div>
-      <br />
-      <div class="row txt--center">
-        <div class="col"><label><input type="radio" name="rDate" hidden><a class="btn--gray">Ontem</a></label></div>
-        <div class="col"><label><input type="radio" name="rDate" hidden><a class="btn--gray">Hoje</a></label></div>
-        <div class="col"><label><input type="radio" name="rDate" hidden><a class="btn--gray">Escolher dia...</a></label></div>
+      <div class="txt--center py1">
+        <label><input type="radio" name="rDate" hidden><a class="btn--gray">Ontem</a></label>
+        <label><input type="radio" name="rDate" hidden><a class="btn--gray">Hoje</a></label>
+        <label><input type="radio" name="rDate" hidden><a class="btn--gray">Escolher dia...</a></label>
       </div>
       <div><input type="text" name="entryDescription"></div>
       <div><input type="date"></div>
       <div><input type="text"></div>
-      <div><input type="date"></div>
-      <div><input type="text"></div>
       <div>lorem ipsum dolor sit amet</div>
       <div>bla bla bla description bla bla bla</div>
-    </div>
-    <div class="card default balance">
-      <div class="row">
+    </section>
+    <section class="default balance">
+      <div class="grd-row">
         <div class="txt--left">Saldo atual</div>
         <div class="currency txt--right">&nbsp;</div>
       </div>
-    </div>
-    <div class="card default income">
-      <div>&#8599; Recebimentos</div>
-      <div></div>
+    </section>
+    <section class="default income">
+      <h4>&#8599; Recebimentos</h4>
       <div class="entries">
         <div class="row entryTemplate" hidden>
           <div class="col t"></div>
@@ -87,10 +82,9 @@
           <div class="col v currency"></div>
         </div>
       </div>
-    </div>
-    <div class="card default expense">
-      <div>&#8600; Pagamentos</div>
-      <div></div>
+    </section>
+    <section class="default expense">
+      <h4>&#8600; Pagamentos</h4>
       <div class="entries">
         <div class="row">
           <div class="col t">&#9663;</div>
@@ -108,22 +102,22 @@
           <div class="col v currency">789</div>
         </div>
       </div>
-    </div>
-    <div class="card default">
+    </section>
+    <section class="default">
       <details>
         <summary>Copyright 1999-2014.</summary>
         <p> - by Refsnes Data. All Rights Reserved.</p>
         <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
       </details>
-    </div>
+    </section>
   </main>
-  <div class="card warning" hidden>
+  <section class="warning" hidden>
     <div>Avisos</div>
     <div>lorem ipsum dolor sit amet consectetuer adipiscing elit.</div>
-  </div>
+  </section>
   <div class="dialog-container" hidden>
     <div class="dialog">
-      <div class="card">
+      <div class="">
         <div>Novo lançamento</div>
         <div class="row">
           <div class="col"><input id="rad1" type="radio" name="radType" checked hidden><label for="rad1"><div class="bg-green">Recebimento</div></label></div>
