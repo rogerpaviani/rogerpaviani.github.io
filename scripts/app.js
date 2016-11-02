@@ -109,6 +109,14 @@
     });
   };
 
+  app.toggleMenu = function (visible) {
+    if (visible) {
+      document.querySelector('header details').setAttribute('open', true);
+    } else {
+      document.querySelector('header details').removeAttribute('open');
+    }
+  };
+
   // app.toggleAddDialog = function (visible) {
   //   if (visible) {
   //     app.addDialog.classList.add('dialog-container--visible');
@@ -133,6 +141,7 @@
     switch (l.hash) {
       default: {
         app.hideAllCards();
+        app.toggleMenu(false);
         app.container.querySelectorAll('.card.' + (l.hash.substr(1) || 'default')).forEach(function (elem) {
           elem.removeAttribute('hidden');
         });
