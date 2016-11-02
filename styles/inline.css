@@ -78,7 +78,6 @@
   }
 }
 
-.menu-container,
 .dialog-container {
   background: rgba(0, 0, 0, 0.57);
   position: fixed;
@@ -93,11 +92,6 @@
   transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
 }
 
-.menu-container {
-  z-index: 2;
-}
-
-.menu-container--visible,
 .dialog-container--visible {
   opacity: 1;
   pointer-events: auto;
@@ -117,39 +111,6 @@
   transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
   transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
   transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s, -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
-}
-
-.menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 5;
-  top: 0;
-  left: 0;
-  background: #FFF;
-  overflow-x: hidden;
-  transition: 0.5s;
-  border-radius: 0px;
-}
-
-.menu-container--visible .menu {
-  width: 280px;
-}
-
-.menu .menu-header {
-  background: #3F51B5;
-  height: 100px;
-  padding: 32px;
-}
-
-.menu ul {
-  list-style: none;
-  padding: 16px;
-  margin: 0px;
-}
-
-.menu ul li {
-  margin-bottom: 16px;
 }
 
 .card {
@@ -212,4 +173,14 @@
 .separator {
   border-top: 2px solid #ececec;
   margin-bottom: 12px;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+main {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
 }

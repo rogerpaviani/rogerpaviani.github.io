@@ -101,7 +101,6 @@
     cardTemplate: document.querySelector('.cardTemplate'),
     container: document.querySelector('main'),
     addDialog: document.querySelector('.dialog-container'),
-    menuDialog: document.querySelector('.menu-container'),
   };
 
   app.hideAllCards = function () {
@@ -109,14 +108,6 @@
       elem.setAttribute('hidden', true);
     });
   };
-
-  app.toogleMenuDialog = function (visible) {
-    if (visible) {
-      app.menuDialog.classList.add('menu-container--visible');
-    } else {
-      app.menuDialog.classList.remove('menu-container--visible');
-    }
-  }
 
   // app.toggleAddDialog = function (visible) {
   //   if (visible) {
@@ -140,19 +131,12 @@
 
   (window.onhashchange = function () {
     switch (l.hash) {
-      case "#menu":
-        {
-          app.toogleMenuDialog(true);
-          break;
-        }
-      default:
-        {
-          app.hideAllCards();
-          app.toogleMenuDialog(false);
-          app.container.querySelectorAll('.card.' + (l.hash.substr(1) || 'default')).forEach(function (elem) {
-            elem.removeAttribute('hidden');
-          });
-        }
+      default: {
+        app.hideAllCards();
+        app.container.querySelectorAll('.card.' + (l.hash.substr(1) || 'default')).forEach(function (elem) {
+          elem.removeAttribute('hidden');
+        });
+      }
     }
   })();
 
